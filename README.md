@@ -4,9 +4,13 @@
 [![rank](https://make.fun/badge/u-puan-one-letter-for-your-day-e54e9c36/mr1229751/one-letter-for-your-day/rank.svg)](https://make.fun/bounty/u-puan-one-letter-for-your-day-e54e9c36/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-puan-one-letter-for-your-day-e54e9c36)
 [![reward](https://make.fun/badge/u-puan-one-letter-for-your-day-e54e9c36/mr1229751/one-letter-for-your-day/reward.svg)](https://make.fun/bounty/u-puan-one-letter-for-your-day-e54e9c36?utm_source=github&utm_medium=readme&utm_campaign=u-puan-one-letter-for-your-day-e54e9c36)
 
-One letter for the day: Q — for "queueing", a whole day spent standing in lines. A tiny Node program writes that single character to the entry file, guarding the gate itself: exactly one character, an uppercase letter from A to Z. The letter was picked by criteria critique over six rivals: vivid, funny-true, and the sharp non-obvious initial rather than the brief's own example.
+This entry answers an entire day with a single letter: Q, for queueing. It is the letter for a day spent moving slowly from one line to the next, waiting your turn at every stop, which makes it both a summary and a small joke about how the day actually felt.
 
-## Run it
+The program in `main.ts` stores that letter as a constant, checks it against the competition gate before writing anything, and then saves it as `entry.txt` inside the directory named by `MAKEFUN_OUTPUT_DIR`. The check enforces the full gate: exactly one character, and that character must be an uppercase letter from A to Z. Only Node built-ins are used, and there is no randomness, so repeated runs produce the exact same file.
+
+The letter itself survived a comparison against six alternatives. It won because it is vivid and recognisable without being the obvious example, and because a single Q quietly contains the whole queue it stands for.
+
+## Running the entry
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
