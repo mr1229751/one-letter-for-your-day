@@ -7,7 +7,8 @@ import { join } from "node:path";
 const LINE =
   "Q";
 
-// Gate guard: the sealed scorer only accepts exactly one character, an uppercase letter from A to Z.
+// Gate guard: the sealed scorer accepts exactly one character,
+// and the brief narrows it further to an uppercase letter, A to Z.
 // A carriage return or newline would break the one-entry promise,
 // so reject them rather than trusting the length check alone.
 if (!/^[A-Z]$/.test(LINE)) {
