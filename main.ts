@@ -7,6 +7,8 @@ import { join } from "node:path";
 const ENTRY_LETTER = "Q";
 
 function assertEntryIsValid(letter: string): void {
+  // The anchored pattern is the whole guard: it rejects empty strings,
+  // lowercase letters, digits, and any entry longer than one character.
   if (!/^[A-Z]$/.test(letter)) {
     throw new Error("Entry must be exactly one uppercase letter, A to Z.");
   }
